@@ -1,0 +1,51 @@
+<div class="container" ng-init="getPayments()">
+	<div class="button-container">
+		<div class="col-xs-12">
+			<button type="button" ui-sref="new-payment"><i class="fa fa-plus"></i> New Payment</button>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="payments-due">
+			<div class="col-xs-12">
+				<a class="expand-collapse-heading" data-toggle="collapse" data-target="#payments-due-expand">Payments Due <span class="pull-right chevron"></span></a>
+				<div class="collapse in" id="payments-due-expand">
+					<div class="collapse-container">
+						<ul>
+							<li ng-repeat="payment in payments">
+								<div class="payment-heading" data-toggle="collapse" data-target="#payment-{{$index}}">
+									<span class="pull-left">{{payment.name}}</span>
+									<span style="float:right">{{payment.totalAmount | number:2}}</span>
+								</div>
+								<div id="payment-{{$index}}" class="collapse in">
+									<div ng-repeat="payer in payment.payers" class="payers-list">
+										<span>{{payer.fname}} {{payer.lname}}</span>
+										<span style="float:right">{{payer.userAmount | currency:"€":2}} <i class="fa fa-check" ng-show="payer.paid"></i><i class="fa fa-times" ng-hide="payer.paid"></i></span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="payments-owed">
+			<div class="col-xs-12">
+				<a class="expand-collapse-heading" data-toggle="collapse" data-target="#payments-owed-expand">Payments Owed <span class="pull-right chevron"></span></a>
+				<div class="collapse in" id="payments-owed-expand">
+					<div class="collapse-container">
+						<ul>
+							<li ng-repeat="payment in paymentsOwed">
+								<span>{{payment.fname}} {{payment.lname}}</span>
+								<span style="float:right">{{payment.amount | currency:"€":2}} <button type="button" class="btn btn-info">Pay</button></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,151 @@
+body{
+	background-color: #fff;
+}
+
+.row,.container, .col-xs-12{
+	margin:0;
+	padding:0;
+}
+
+.view-container{
+	width: 100%;
+	position: absolute;
+	height: 70%;
+	overflow: scroll;
+}
+
+
+.profile{
+	float: right;
+	position: relative;
+	top: 5px;
+	right: 5%;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	background-color: #ddd;
+}
+
+.profile i{
+	position: absolute;
+	right: 18%;
+	top: 3px;
+}
+
+.header{
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border: 1px solid #ddd;
+	font-family: 'Amatic SC', cursive;
+	font-size: 30px;
+}
+
+.footer{
+	position: absolute;
+	bottom:0;
+	height:65px;
+	border-top: 1px solid #ddd;
+	width: 100%;
+}
+
+.footer .footer-section{
+	width: 39%;
+	display: inline-block;
+	text-align: center;
+	line-height: 65px;
+}
+
+.footer .footer-section.middle{
+	background-color: #0a9dc7;
+	border-radius: 50%;
+	width: 65px;
+	color: white;
+}
+
+.footer .footer-section img{
+	height: 30px;
+	position: relative;
+}
+
+.container .button-container{
+	padding: 10px;
+	overflow: auto;
+}
+
+.container .button-container button{
+	float: right;
+	background-color: #33cd5f;
+	color: #fff;
+	padding: 5px 10px;
+	border:none;
+	font-family: 'Amatic SC', cursive;
+	font-size: 20px;
+}
+
+.container .payments-due, .container .payments-owed {
+	margin-top: 10px;
+	width: 100%;
+}
+
+.container .payments-due .expand-collapse-heading,
+.container .payments-owed .expand-collapse-heading{
+	border: 1px solid #ddd;
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+	display: block;
+	font-family: 'Amatic SC', cursive;
+	font-size: 25px;
+	color: #fff;
+	background-color: #0a9dc7;
+	
+}
+
+#payments-due-expand.collapse.in,
+#payments-owed-expand.collapse.in{
+	display: block;
+}
+
+#payments-due-expand.collapse,
+#payments-owed-expand.collapse{
+	display: none;
+}
+
+.container .payments-due .expand-collapse-heading span:before,
+.container .payments-owed .expand-collapse-heading span:before{
+	content:"\f078";
+	font-family: FontAwesome;
+}
+
+.container .payments-due .expand-collapse-heading.collapsed span:before,
+.container .payments-owed .expand-collapse-heading.collapsed span:before{
+	content:"\f054";
+	font-family: FontAwesome;
+}
+
+.collapse-container{
+	padding: 10px 15px;
+}
+
+.collapse-container ul li{
+	padding: 5px;
+	overflow: auto;
+}
+
+.collapse-container ul li .payment-heading{
+	overflow: auto;
+	border-bottom: 1px solid #ddd;
+	font-size: 18px;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+}
+
+.collapse-container ul li .payers-list{
+	padding: 5px;
+}
+
+#payment-form label{
+	font-family: 'Amatic SC', cursive;
+	font-size: 20px;
+}

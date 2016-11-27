@@ -1,0 +1,35 @@
+<div class="container" ng-init="initDatePicker()">
+	<form style="padding:15px;" id="payment-form">
+		<div class="row">
+			<div class="form-group col-xs-10">
+				<label for="name">Payment Name:</label>
+				<input type="text" class="form-control" id="name"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-xs-5">
+				<label for="amount">Total Amount:</label>
+				<input type="number" class="form-control" id="amount"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-xs-8">
+				<label for="splitType">Split:</label><br/>
+				<label><input type="radio" value="0" checked> Evenly</label><br/>
+				<label><input type="radio" value="1"> Individual Amounts</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-xs-5">
+				<label for="paymentDate">Due Date:</label>
+				<input type="text" value="20-08-2016" id="paymentDate" ng-click="showDatepicker()"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-xs-5">
+				<label for="payersList">Payers:</label>
+				<button class="btn btn-info">Add <i class="fa fa-plus"></i></button>
+			</div>
+		</div>
+	</form>
+</div>
